@@ -74,7 +74,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://api.femsa.io*
+All URIs are relative to *https://api.conekta.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
