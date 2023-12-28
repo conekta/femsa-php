@@ -438,7 +438,7 @@ class BalancesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.femsa-v2.1.0+json', ],
+            ['application/vnd.conekta-v2.1.0+json', ],
             $contentType,
             $multipart
         );
