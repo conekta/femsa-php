@@ -75,8 +75,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'string',
         'payment_sources' => '\Femsa\Model\CustomerPaymentMethodsResponse',
         'phone' => 'string',
-        'shipping_contacts' => '\Femsa\Model\CustomerResponseShippingContacts',
-        'subscription' => '\Femsa\Model\SubscriptionResponse'
+        'shipping_contacts' => '\Femsa\Model\CustomerResponseShippingContacts'
     ];
 
     /**
@@ -103,8 +102,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => null,
         'payment_sources' => null,
         'phone' => null,
-        'shipping_contacts' => null,
-        'subscription' => null
+        'shipping_contacts' => null
     ];
 
     /**
@@ -129,8 +127,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => false,
         'payment_sources' => false,
         'phone' => false,
-        'shipping_contacts' => false,
-        'subscription' => false
+        'shipping_contacts' => false
     ];
 
     /**
@@ -235,8 +232,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'object',
         'payment_sources' => 'payment_sources',
         'phone' => 'phone',
-        'shipping_contacts' => 'shipping_contacts',
-        'subscription' => 'subscription'
+        'shipping_contacts' => 'shipping_contacts'
     ];
 
     /**
@@ -261,8 +257,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'setObject',
         'payment_sources' => 'setPaymentSources',
         'phone' => 'setPhone',
-        'shipping_contacts' => 'setShippingContacts',
-        'subscription' => 'setSubscription'
+        'shipping_contacts' => 'setShippingContacts'
     ];
 
     /**
@@ -287,8 +282,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'getObject',
         'payment_sources' => 'getPaymentSources',
         'phone' => 'getPhone',
-        'shipping_contacts' => 'getShippingContacts',
-        'subscription' => 'getSubscription'
+        'shipping_contacts' => 'getShippingContacts'
     ];
 
     /**
@@ -365,7 +359,6 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('payment_sources', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
         $this->setIfExists('shipping_contacts', $data ?? [], null);
-        $this->setIfExists('subscription', $data ?? [], null);
     }
 
     /**
@@ -909,33 +902,6 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable shipping_contacts cannot be null');
         }
         $this->container['shipping_contacts'] = $shipping_contacts;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscription
-     *
-     * @return \Femsa\Model\SubscriptionResponse|null
-     */
-    public function getSubscription()
-    {
-        return $this->container['subscription'];
-    }
-
-    /**
-     * Sets subscription
-     *
-     * @param \Femsa\Model\SubscriptionResponse|null $subscription subscription
-     *
-     * @return self
-     */
-    public function setSubscription($subscription)
-    {
-        if (is_null($subscription)) {
-            throw new \InvalidArgumentException('non-nullable subscription cannot be null');
-        }
-        $this->container['subscription'] = $subscription;
 
         return $this;
     }

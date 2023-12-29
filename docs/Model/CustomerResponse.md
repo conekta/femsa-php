@@ -21,6 +21,5 @@ Name | Type | Description | Notes
 **payment_sources** | [**\Femsa\Model\CustomerPaymentMethodsResponse**](CustomerPaymentMethodsResponse.md) |  | [optional]
 **phone** | **string** | Customer&#39;s phone number | [optional]
 **shipping_contacts** | [**\Femsa\Model\CustomerResponseShippingContacts**](CustomerResponseShippingContacts.md) |  | [optional]
-**subscription** | [**\Femsa\Model\SubscriptionResponse**](SubscriptionResponse.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

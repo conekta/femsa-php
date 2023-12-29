@@ -15,8 +15,6 @@ Name | Type | Description | Notes
 **name** | **string** | Client&#39;s name |
 **payment_sources** | [**\Femsa\Model\CustomerPaymentMethodsRequest[]**](CustomerPaymentMethodsRequest.md) | Contains details of the payment methods that the customer has active or has used in Femsa | [optional]
 **phone** | **string** | Is the customer&#39;s phone number |
-**plan_id** | **string** | Contains the ID of a plan, which could together with name, email and phone create a client directly to a subscription | [optional]
 **shipping_contacts** | [**\Femsa\Model\CustomerShippingContacts[]**](CustomerShippingContacts.md) | Contains the detail of the shipping addresses that the client has active or has used in Femsa | [optional]
-**subscription** | [**\Femsa\Model\SubscriptionRequest**](SubscriptionRequest.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

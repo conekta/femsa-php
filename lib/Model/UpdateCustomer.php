@@ -64,15 +64,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'string',
         'name' => 'string',
         'phone' => 'string',
-        'plan_id' => 'string',
         'default_shipping_contact_id' => 'string',
         'corporate' => 'bool',
         'custom_reference' => 'string',
         'fiscal_entities' => '\Femsa\Model\CustomerFiscalEntitiesRequest[]',
         'metadata' => 'array<string,mixed>',
         'payment_sources' => '\Femsa\Model\CustomerPaymentMethodsRequest[]',
-        'shipping_contacts' => '\Femsa\Model\CustomerShippingContacts[]',
-        'subscription' => '\Femsa\Model\SubscriptionRequest'
+        'shipping_contacts' => '\Femsa\Model\CustomerShippingContacts[]'
     ];
 
     /**
@@ -88,15 +86,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => null,
         'name' => null,
         'phone' => null,
-        'plan_id' => null,
         'default_shipping_contact_id' => null,
         'corporate' => null,
         'custom_reference' => null,
         'fiscal_entities' => null,
         'metadata' => null,
         'payment_sources' => null,
-        'shipping_contacts' => null,
-        'subscription' => null
+        'shipping_contacts' => null
     ];
 
     /**
@@ -110,15 +106,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => false,
         'name' => false,
         'phone' => false,
-        'plan_id' => false,
         'default_shipping_contact_id' => false,
         'corporate' => false,
         'custom_reference' => false,
         'fiscal_entities' => false,
         'metadata' => false,
         'payment_sources' => false,
-        'shipping_contacts' => false,
-        'subscription' => false
+        'shipping_contacts' => false
     ];
 
     /**
@@ -212,15 +206,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'email',
         'name' => 'name',
         'phone' => 'phone',
-        'plan_id' => 'plan_id',
         'default_shipping_contact_id' => 'default_shipping_contact_id',
         'corporate' => 'corporate',
         'custom_reference' => 'custom_reference',
         'fiscal_entities' => 'fiscal_entities',
         'metadata' => 'metadata',
         'payment_sources' => 'payment_sources',
-        'shipping_contacts' => 'shipping_contacts',
-        'subscription' => 'subscription'
+        'shipping_contacts' => 'shipping_contacts'
     ];
 
     /**
@@ -234,15 +226,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'setEmail',
         'name' => 'setName',
         'phone' => 'setPhone',
-        'plan_id' => 'setPlanId',
         'default_shipping_contact_id' => 'setDefaultShippingContactId',
         'corporate' => 'setCorporate',
         'custom_reference' => 'setCustomReference',
         'fiscal_entities' => 'setFiscalEntities',
         'metadata' => 'setMetadata',
         'payment_sources' => 'setPaymentSources',
-        'shipping_contacts' => 'setShippingContacts',
-        'subscription' => 'setSubscription'
+        'shipping_contacts' => 'setShippingContacts'
     ];
 
     /**
@@ -256,15 +246,13 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         'email' => 'getEmail',
         'name' => 'getName',
         'phone' => 'getPhone',
-        'plan_id' => 'getPlanId',
         'default_shipping_contact_id' => 'getDefaultShippingContactId',
         'corporate' => 'getCorporate',
         'custom_reference' => 'getCustomReference',
         'fiscal_entities' => 'getFiscalEntities',
         'metadata' => 'getMetadata',
         'payment_sources' => 'getPaymentSources',
-        'shipping_contacts' => 'getShippingContacts',
-        'subscription' => 'getSubscription'
+        'shipping_contacts' => 'getShippingContacts'
     ];
 
     /**
@@ -329,7 +317,6 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
-        $this->setIfExists('plan_id', $data ?? [], null);
         $this->setIfExists('default_shipping_contact_id', $data ?? [], null);
         $this->setIfExists('corporate', $data ?? [], false);
         $this->setIfExists('custom_reference', $data ?? [], null);
@@ -337,7 +324,6 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('metadata', $data ?? [], null);
         $this->setIfExists('payment_sources', $data ?? [], null);
         $this->setIfExists('shipping_contacts', $data ?? [], null);
-        $this->setIfExists('subscription', $data ?? [], null);
     }
 
     /**
@@ -524,33 +510,6 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable phone cannot be null');
         }
         $this->container['phone'] = $phone;
-
-        return $this;
-    }
-
-    /**
-     * Gets plan_id
-     *
-     * @return string|null
-     */
-    public function getPlanId()
-    {
-        return $this->container['plan_id'];
-    }
-
-    /**
-     * Sets plan_id
-     *
-     * @param string|null $plan_id Contains the ID of a plan, which could together with name, email and phone create a client directly to a subscription
-     *
-     * @return self
-     */
-    public function setPlanId($plan_id)
-    {
-        if (is_null($plan_id)) {
-            throw new \InvalidArgumentException('non-nullable plan_id cannot be null');
-        }
-        $this->container['plan_id'] = $plan_id;
 
         return $this;
     }
@@ -744,33 +703,6 @@ class UpdateCustomer implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable shipping_contacts cannot be null');
         }
         $this->container['shipping_contacts'] = $shipping_contacts;
-
-        return $this;
-    }
-
-    /**
-     * Gets subscription
-     *
-     * @return \Femsa\Model\SubscriptionRequest|null
-     */
-    public function getSubscription()
-    {
-        return $this->container['subscription'];
-    }
-
-    /**
-     * Sets subscription
-     *
-     * @param \Femsa\Model\SubscriptionRequest|null $subscription subscription
-     *
-     * @return self
-     */
-    public function setSubscription($subscription)
-    {
-        if (is_null($subscription)) {
-            throw new \InvalidArgumentException('non-nullable subscription cannot be null');
-        }
-        $this->container['subscription'] = $subscription;
 
         return $this;
     }

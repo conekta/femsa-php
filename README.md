@@ -130,11 +130,6 @@ Class | Method | HTTP request | Description
 *PaymentMethodsApi* | [**deleteCustomerPaymentMethods**](docs/Api/PaymentMethodsApi.md#deletecustomerpaymentmethods) | **DELETE** /customers/{id}/payment_sources/{payment_method_id} | Delete Payment Method
 *PaymentMethodsApi* | [**getCustomerPaymentMethods**](docs/Api/PaymentMethodsApi.md#getcustomerpaymentmethods) | **GET** /customers/{id}/payment_sources | Get Payment Methods
 *PaymentMethodsApi* | [**updateCustomerPaymentMethods**](docs/Api/PaymentMethodsApi.md#updatecustomerpaymentmethods) | **PUT** /customers/{id}/payment_sources/{payment_method_id} | Update Payment Method
-*PlansApi* | [**createPlan**](docs/Api/PlansApi.md#createplan) | **POST** /plans | Create Plan
-*PlansApi* | [**deletePlan**](docs/Api/PlansApi.md#deleteplan) | **DELETE** /plans/{id} | Delete Plan
-*PlansApi* | [**getPlan**](docs/Api/PlansApi.md#getplan) | **GET** /plans/{id} | Get Plan
-*PlansApi* | [**getPlans**](docs/Api/PlansApi.md#getplans) | **GET** /plans | Get A List of Plans
-*PlansApi* | [**updatePlan**](docs/Api/PlansApi.md#updateplan) | **PUT** /plans/{id} | Update Plan
 *ProductsApi* | [**ordersCreateProduct**](docs/Api/ProductsApi.md#orderscreateproduct) | **POST** /orders/{id}/line_items | Create Product
 *ProductsApi* | [**ordersDeleteProduct**](docs/Api/ProductsApi.md#ordersdeleteproduct) | **DELETE** /orders/{id}/line_items/{line_item_id} | Delete Product
 *ProductsApi* | [**ordersUpdateProduct**](docs/Api/ProductsApi.md#ordersupdateproduct) | **PUT** /orders/{id}/line_items/{line_item_id} | Update Product
@@ -144,13 +139,6 @@ Class | Method | HTTP request | Description
 *ShippingsApi* | [**ordersCreateShipping**](docs/Api/ShippingsApi.md#orderscreateshipping) | **POST** /orders/{id}/shipping_lines | Create Shipping
 *ShippingsApi* | [**ordersDeleteShipping**](docs/Api/ShippingsApi.md#ordersdeleteshipping) | **DELETE** /orders/{id}/shipping_lines/{shipping_id} | Delete Shipping
 *ShippingsApi* | [**ordersUpdateShipping**](docs/Api/ShippingsApi.md#ordersupdateshipping) | **PUT** /orders/{id}/shipping_lines/{shipping_id} | Update Shipping
-*SubscriptionsApi* | [**cancelSubscription**](docs/Api/SubscriptionsApi.md#cancelsubscription) | **POST** /customers/{id}/subscription/cancel | Cancel Subscription
-*SubscriptionsApi* | [**createSubscription**](docs/Api/SubscriptionsApi.md#createsubscription) | **POST** /customers/{id}/subscription | Create Subscription
-*SubscriptionsApi* | [**getAllEventsFromSubscription**](docs/Api/SubscriptionsApi.md#getalleventsfromsubscription) | **GET** /customers/{id}/subscription/events | Get Events By Subscription
-*SubscriptionsApi* | [**getSubscription**](docs/Api/SubscriptionsApi.md#getsubscription) | **GET** /customers/{id}/subscription | Get Subscription
-*SubscriptionsApi* | [**pauseSubscription**](docs/Api/SubscriptionsApi.md#pausesubscription) | **POST** /customers/{id}/subscription/pause | Pause Subscription
-*SubscriptionsApi* | [**resumeSubscription**](docs/Api/SubscriptionsApi.md#resumesubscription) | **POST** /customers/{id}/subscription/resume | Resume Subscription
-*SubscriptionsApi* | [**updateSubscription**](docs/Api/SubscriptionsApi.md#updatesubscription) | **PUT** /customers/{id}/subscription | Update Subscription
 *TaxesApi* | [**ordersCreateTaxes**](docs/Api/TaxesApi.md#orderscreatetaxes) | **POST** /orders/{id}/tax_lines | Create Tax
 *TaxesApi* | [**ordersDeleteTaxes**](docs/Api/TaxesApi.md#ordersdeletetaxes) | **DELETE** /orders/{id}/tax_lines/{tax_id} | Delete Tax
 *TaxesApi* | [**ordersUpdateTaxes**](docs/Api/TaxesApi.md#ordersupdatetaxes) | **PUT** /orders/{id}/tax_lines/{tax_id} | Update Tax
@@ -249,7 +237,6 @@ Class | Method | HTTP request | Description
 - [GetOrderDiscountLinesResponse](docs/Model/GetOrderDiscountLinesResponse.md)
 - [GetOrdersResponse](docs/Model/GetOrdersResponse.md)
 - [GetPaymentMethodResponse](docs/Model/GetPaymentMethodResponse.md)
-- [GetPlansResponse](docs/Model/GetPlansResponse.md)
 - [GetTransactionsResponse](docs/Model/GetTransactionsResponse.md)
 - [GetTransfersResponse](docs/Model/GetTransfersResponse.md)
 - [GetWebhookKeysResponse](docs/Model/GetWebhookKeysResponse.md)
@@ -287,9 +274,6 @@ Class | Method | HTTP request | Description
 - [PaymentMethodCashRequest](docs/Model/PaymentMethodCashRequest.md)
 - [PaymentMethodCashResponse](docs/Model/PaymentMethodCashResponse.md)
 - [PaymentMethodResponse](docs/Model/PaymentMethodResponse.md)
-- [PlanRequest](docs/Model/PlanRequest.md)
-- [PlanResponse](docs/Model/PlanResponse.md)
-- [PlanUpdateRequest](docs/Model/PlanUpdateRequest.md)
 - [Product](docs/Model/Product.md)
 - [ProductDataResponse](docs/Model/ProductDataResponse.md)
 - [ProductOrderResponse](docs/Model/ProductOrderResponse.md)
@@ -298,10 +282,6 @@ Class | Method | HTTP request | Description
 - [ShippingOrderResponse](docs/Model/ShippingOrderResponse.md)
 - [ShippingRequest](docs/Model/ShippingRequest.md)
 - [SmsCheckoutRequest](docs/Model/SmsCheckoutRequest.md)
-- [SubscriptionEventsResponse](docs/Model/SubscriptionEventsResponse.md)
-- [SubscriptionRequest](docs/Model/SubscriptionRequest.md)
-- [SubscriptionResponse](docs/Model/SubscriptionResponse.md)
-- [SubscriptionUpdateRequest](docs/Model/SubscriptionUpdateRequest.md)
 - [TransactionResponse](docs/Model/TransactionResponse.md)
 - [TransferDestinationResponse](docs/Model/TransferDestinationResponse.md)
 - [TransferMethodResponse](docs/Model/TransferMethodResponse.md)
